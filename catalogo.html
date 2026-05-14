@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo — NoSleep Studio</title>
+    <link rel="icon" type="image/png" href="images/logos/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    keyframes: {
+                        fadeInDown: {
+                            '0%':   { opacity: '0', transform: 'translateY(-18px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInUp: {
+                            '0%':   { opacity: '0', transform: 'translateY(22px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInRight: {
+                            '0%':   { opacity: '0', transform: 'translateX(28px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        fadeIn: {
+                            '0%':   { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%':   { opacity: '0', transform: 'scale(0.96)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                    },
+                    animation: {
+                        'fade-in-down':  'fadeInDown 1.4s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in-up':    'fadeInUp 1.3s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in-right': 'fadeInRight 1.6s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in':       'fadeIn 1.2s ease both',
+                        'scale-in':      'scaleIn 0.9s cubic-bezier(0.22,1,0.36,1) both',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="page-loader">
+        <img src="images/logos/favicon.png" alt="Cargando" class="loader-icon">
+    </div>
+
+    <!-- Header -->
+    <header class="header animate-fade-in-down">
+        <button class="hamburger" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-left">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html" class="active">Catálogo</a>
+            <a href="index.html#conocenos">Conócenos</a>
+        </nav>
+        
+        <a href="index.html" class="logo">
+            <img class="logo-full" src="images/logos/logo.png" alt="NoSleep Studio">
+            <img class="logo-icon" src="images/logos/favicon.png" alt="NoSleep Studio">
+        </a>
+        
+        <div class="search-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 20L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Hero Catálogo -->
+    <section class="catalogo-hero">
+        <div class="catalogo-hero-content">
+            <h1 class="catalogo-title">Catálogo</h1>
+        </div>
+    </section>
+
+    <!-- Grid de Productos -->
+    <section class="catalogo-grid-section">
+        <div class="catalogo-grid">
+
+            <!-- Card 1: L-1 -->
+            <article class="producto-card reveal reveal-up">
+                <div class="producto-carousel" data-carousel>
+                    <div class="producto-carousel-track">
+                        <div class="producto-slide">
+                            <img src="images/Productos/L-1/img1.jpg" alt="L-1 - Vista 1">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/L-1/img2.jpg" alt="L-1 - Vista 2">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/L-1/img3.png" alt="L-1 - Vista 3">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/L-1/img4.jpg" alt="L-1 - Vista 4">
+                        </div>
+                    </div>
+                    <!-- Controles del carrusel -->
+                    <button class="producto-arrow producto-arrow-prev" aria-label="Anterior">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button class="producto-arrow producto-arrow-next" aria-label="Siguiente">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    <div class="producto-dots"></div>
+                </div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">L-1</h3>
+                    <p class="producto-descripcion">
+                        Una lámpara diseñada a partir de la intersección de formas simples, donde la geometría define la pieza.
+                    </p>
+                    <div class="producto-footer">
+                        <span class="producto-precio">$1,799 MXN</span>
+                        <button type="button" class="producto-btn" onclick="openModal('modal-l1')">Ver Más</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer animate-fade-in" style="animation-delay:0.45s">
+        <div class="footer-left">
+            <a href="index.html#contacto">Contacto</a>
+        </div>
+        
+        <div class="footer-center">
+            <p>Guadalajara / Ags</p>
+        </div>
+        
+        <div class="footer-right">
+            <div class="footer-logo">
+                <img src="images/logos/icono.png" alt="NoSleep">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Producto L-1 -->
+    <div id="modal-l1" class="fixed inset-0 z-[90] hidden bg-white overflow-y-auto pt-[90px] pb-[60px]">
+
+        <!-- Flecha salir -->
+        <div class="px-[5%] pt-4 pb-2 flex justify-end">
+            <button onclick="closeModal('modal-l1')" aria-label="Cerrar"
+                style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:#999;font-size:0.7rem;font-family:'ISOCPEUR',monospace;letter-spacing:0.12em;text-transform:uppercase;padding:0;"
+                onmouseover="this.style.color='#111'" onmouseout="this.style.color='#999'">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                Volver
+            </button>
+        </div>
+
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-start pt-2 pb-60 px-[5%]">
+
+            <!-- Modal Carousel -->
+            <article class="w-full" style="overflow:hidden;">
+                <div class="producto-carousel" data-carousel style="height:clamp(260px,35vw,480px);">
+                    <div class="producto-carousel-track">
+                        <div class="producto-slide">
+                            <img src="images/Productos/L-1/img1.jpg" alt="L-1 - Vista 1" style="width:100%;height:100%;object-fit:contain;display:block;">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/L-1/img2.jpg" alt="L-1 - Vista 2" style="width:100%;height:100%;object-fit:contain;display:block;">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/L-1/img3.png" alt="L-1 - Vista 3" style="width:100%;height:100%;object-fit:contain;display:block;">
+                        </div>
+                        <div class="producto-slide">
+                            <img src="images/Productos/L-1/img4.jpg" alt="L-1 - Vista 4" style="width:100%;height:100%;object-fit:contain;display:block;">
+                        </div>
+                    </div>
+                    <button class="producto-arrow producto-arrow-prev" aria-label="Anterior">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button class="producto-arrow producto-arrow-next" aria-label="Siguiente">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    <div class="producto-dots"></div>
+                </div>
+            </article>
+
+            <!-- Modal Info -->
+            <aside class="flex flex-col justify-start md:sticky md:top-[210px] pt-2">
+                <!-- Eyebrow -->
+                <span class="text-[0.62rem] font-light tracking-[0.2em] uppercase text-gray-400 mb-4" style="font-family: var(--font-main);">NoSleep Studio</span>
+                <h3 class="text-5xl md:text-6xl font-light text-gray-900 mb-6 leading-none" style="font-family: var(--font-main);">L-1</h3>
+                <div class="w-8 h-px bg-gray-300 mb-8"></div>
+                <p class="text-sm text-gray-500 font-light leading-loose mb-12">
+                    Una lámpara diseñada a partir de la intersección de formas simples, donde la geometría define la pieza.
+                </p>
+                <!-- Precio -->
+                <div class="mb-8">
+                    <span class="block text-xs text-gray-400 uppercase tracking-widest mb-2" style="font-family: var(--font-accent);">Precio</span>
+                    <span class="producto-precio text-3xl text-gray-900">$1,799 MXN</span>
+                </div>
+                <!-- CTA -->
+                <a href="index.html#contacto" onclick="closeModal('modal-l1')"
+                   class="flex items-center justify-between w-full border border-black px-6 py-4 text-sm tracking-[0.15em] uppercase text-black hover:bg-black hover:text-white transition-all duration-300 group"
+                   style="font-family: var(--font-accent);">
+                    Contáctanos
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </aside>
+
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Evitar scroll en el fondo
+                // Si el carrusel del modal necesita reiniciar, puedes hacerlo aquí
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restaurar scroll
+            }
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>

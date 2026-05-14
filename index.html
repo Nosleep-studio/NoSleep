@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoSleep Studio</title>
+    <link rel="icon" type="image/png" href="images/logos/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    keyframes: {
+                        fadeInDown: {
+                            '0%':   { opacity: '0', transform: 'translateY(-18px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInUp: {
+                            '0%':   { opacity: '0', transform: 'translateY(22px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInRight: {
+                            '0%':   { opacity: '0', transform: 'translateX(28px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        fadeIn: {
+                            '0%':   { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%':   { opacity: '0', transform: 'scale(0.96)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                    },
+                    animation: {
+                        'fade-in-down':  'fadeInDown 1.4s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in-up':    'fadeInUp 1.3s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in-right': 'fadeInRight 1.6s cubic-bezier(0.22,1,0.36,1) both',
+                        'fade-in':       'fadeIn 1.2s ease both',
+                        'scale-in':      'scaleIn 0.9s cubic-bezier(0.22,1,0.36,1) both',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="page-loader">
+        <img src="images/logos/favicon.png" alt="Cargando" class="loader-icon">
+    </div>
+
+    <!-- Header -->
+    <header class="header animate-fade-in-down">
+        <button class="hamburger" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-left">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="#conocenos">Conócenos</a>
+        </nav>
+        
+        <a href="index.html" class="logo">
+            <img class="logo-full" src="images/logos/logo.png" alt="NoSleep Studio">
+            <img class="logo-icon" src="images/logos/favicon.png" alt="NoSleep Studio">
+        </a>
+        
+        <div class="search-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 20L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="hero">
+        <div class="hero-content">
+            <div class="hero-text animate-fade-in-up" style="animation-delay:0.25s">
+                <h2>NoSleep Studio</h2>
+                <p>Enfocados en el desarrollo de mobiliario y objetos, con un enfoque integral que abarca desde la conceptualización hasta la ejecución.</p>
+            </div>
+            
+            <div class="hero-image animate-fade-in-right" style="animation-delay:0.1s">
+                <img src="images/index/pantalla-principal.jpg" alt="Diseño Industrial NoSleep">
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="proyectos-section reveal">
+        <!-- Columna texto -->
+        <div class="proyectos-texto">
+            <span class="proyectos-eyebrow">Nuestro trabajo</span>
+            <h2 class="proyectos-titulo">Explora nuestro catálogo.</h2>
+            <p class="proyectos-descripcion">
+                Diseñamos objetos que exploran la relación entre material, forma y funcionalidad.
+                Cada proyecto nace de un proceso de experimentación y detalle, buscando crear productos con identidad propia y presencia atemporal.
+            </p>
+            <a href="catalogo.html" class="proyectos-btn">
+                Ver catálogo
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+        </div>
+
+        <!-- Columna imagen -->
+        <div class="proyectos-imagen reveal reveal-right">
+            <img src="images/index/proyecto.jpg" alt="Proyecto NoSleep">
+        </div>
+    </section>
+
+    <!-- Sección Conócenos -->
+    <section id="conocenos" class="conocenos-section">
+        <div class="conocenos-content">
+            <div class="conocenos-image reveal reveal-left">
+                <img src="images/conocenos/conocenos.png" alt="Mauricio Ortiz y Erick Limón - NoSleep Studio">
+            </div>
+            <div class="conocenos-info">
+                <div class="conocenos-header reveal reveal-up">
+                    <h2>Conócenos</h2>
+                </div>
+                <p class="conocenos-text reveal reveal-up" style="transition-delay: 0.15s">
+                    Somos Mauricio Ortiz y Erick Limón, diseñadores industriales y fundadores de NoSleep Studio. Desde el despacho desarrollamos proyectos de mobiliario y objetos con un enfoque que integra concepto, materialidad y ejecución, entendiendo el diseño como un proceso donde la claridad del criterio y la precisión en su ejecución son parte escencial del resultado.
+                </p>
+                <div class="conocenos-icon-bottom reveal reveal-up" style="transition-delay: 0.25s">
+                    <img src="images/logos/icono.png" alt="NoSleep">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto-section">
+        <div class="contacto-container">
+            <h2 class="reveal reveal-up">Contáctanos</h2>
+
+            <div class="contacto-grid">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/no.sleep.studio?igsh=bnV3cDhtY3d0bnVy&utm_source=qr" target="_blank" class="contacto-item reveal reveal-up">
+                    <div class="contacto-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <span class="contacto-label">Instagram</span>
+                    <span class="contacto-value">@no.sleep.studio</span>
+                </a>
+
+                <!-- Teléfono -->
+                <div class="contacto-item reveal reveal-up" style="transition-delay:0.1s">
+                    <div class="contacto-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.41 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 5.18 5.18l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <span class="contacto-label">Teléfono</span>
+                    <a href="tel:+524493125265" class="contacto-value">+52 449 312 5265</a>
+                    <a href="tel:+524491733920" class="contacto-value">+52 449 173 3920</a>
+                </div>
+
+                <!-- Correo -->
+                <a href="mailto:contact@nosleepstudio.com" class="contacto-item reveal reveal-up" style="transition-delay:0.15s">
+                    <div class="contacto-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m2 7 10 7 10-7"/>
+                        </svg>
+                    </div>
+                    <span class="contacto-label">Correo</span>
+                    <span class="contacto-value">contact@nosleepstudio.com</span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/nosleep-studio" target="_blank" class="contacto-item reveal reveal-up" style="transition-delay:0.2s">
+                    <div class="contacto-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="4"/>
+                            <path d="M7 10v7"/>
+                            <path d="M11 10v7"/>
+                            <path d="M11 13.5a3.5 3.5 0 0 1 7 0V17"/>
+                            <circle cx="7" cy="7.5" r="0.8" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <span class="contacto-label">Linkedin</span>
+                    <span class="contacto-value">No Sleep Studio</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer animate-fade-in" style="animation-delay:0.45s">
+        <div class="footer-left">
+            <a href="#contacto">Contacto</a>
+        </div>
+        
+        <div class="footer-center">
+            <p>Guadalajara / Ags</p>
+        </div>
+        
+        <div class="footer-right">
+            <div class="footer-logo">
+                <img src="images/logos/icono.png" alt="NoSleep">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
