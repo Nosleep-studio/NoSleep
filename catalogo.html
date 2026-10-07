@@ -163,7 +163,7 @@
             </button>
         </div>
 
-        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-start pt-2 pb-60 px-[5%]">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-start pt-2 pb-8 px-[5%]">
 
             <!-- Modal Carousel -->
             <article class="w-full" style="overflow:hidden;">
@@ -204,17 +204,37 @@
                 <!-- Precio -->
                 <div class="mb-8">
                     <span class="block text-xs text-gray-400 uppercase tracking-widest mb-2" style="font-family: var(--font-accent);">Precio</span>
-                    <span class="producto-precio text-3xl text-gray-900">$2,087 MXN</span>
+                    <span class="producto-precio text-3xl text-gray-900">$2,086 MXN</span>
+                    <span class="block text-xs text-gray-400 font-light mt-2" style="font-family: var(--font-main);">Envío no incluido</span>
                 </div>
                 <!-- CTA -->
                 <a href="index.html#contacto" onclick="closeModal('modal-l1')"
-                   class="flex items-center justify-between w-full border border-black px-6 py-4 text-sm tracking-[0.15em] uppercase text-black hover:bg-black hover:text-white transition-all duration-300 group"
-                   style="font-family: var(--font-accent);">
+                   class="flex items-center justify-between w-full px-6 py-4 text-sm tracking-[0.15em] uppercase text-black hover:bg-black hover:text-white transition-all duration-300 group"
+                   style="font-family: var(--font-accent); border-top: 1px solid #e0e0e0; border-bottom: none; border-left: none; border-right: none;">
                     Contáctanos
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
             </aside>
 
+        </div>
+
+        <!-- Sección de Especificaciones Técnicas -->
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-start px-[5%] pb-60">
+            <!-- Imagen plano técnico -->
+            <div class="w-full">
+                <img src="images/Productos/L-1/planos.png" alt="L-1 - Plano técnico" style="width:100%; height:auto; object-fit:contain; display:block;">
+            </div>
+            <!-- Lista de especificaciones -->
+            <div class="flex flex-col justify-center pt-4">
+                <ul class="space-y-3 text-sm text-gray-700 font-light leading-relaxed" style="font-family: var(--font-main); list-style: disc; padding-left: 1.2rem;">
+                    <li><strong class="font-medium">Material principal:</strong> Acero inoxidable, acero al carbón pintado al horno, pintura automotiva (Depende de modelo)</li>
+                    <li><strong class="font-medium">Fuente de luz:</strong> Compatible con focos LED E26 (Foco incluido: LED 2700 K, 6 W)</li>
+                    <li><strong class="font-medium">Voltaje:</strong> 127 V ~ 60 Hz</li>
+                    <li><strong class="font-medium">Uso:</strong> Interior</li>
+                    <li><strong class="font-medium">Tipo de cable:</strong> Tela color gris, clavija y switch blanco</li>
+                    <li><strong class="font-medium">Longitud de cable:</strong> 1.3m</li>
+                </ul>
+            </div>
         </div>
     </div>
 
